@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Regime</title>
+    <style type="text/css">
+        .text{
+            width:1460px;
+            height:20px; /* Increased height for the text box */
+            background-color: deepskyblue;
+            font-size: 20px;
+            text-align: center;
+            color:white;
+            padding: 5px; /* Added padding for better readability */
+        }
+        .container{
+            width:1470px;
+            height:40px;
+            background-color: black;
+            font-size: 30px;
+            text-align: justify;
+            color: white;
+        }
+        .legend{
+            background-color: deepskyblue;
+        }
+        textarea#Documents {
+            width: 1000px; /* Increased width for the document textarea */
+            height: 100px;
+            box-shadow:80px; /* Increased height for the document textarea */
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">Tax Regime</div>
+        <div class="text">Tax Regime Switch option facilities from default (New Tax Regime) to Old tax Regime for financial year 2023-2024</div>
+        <fieldset>
+            <legend>Record Details</legend>
+                P no: <input  id="number" name="name" required=""placeholder="151514"autofocus/>
+                <br/>
+                <br/>
+                 Name: <input type="text" name="name" required=""placeholder="Shashi Kumar"/>
+                <br>
+                <br/>
+                 Level: <input type="text,number" name="level" required=""placeholder="JM12"/>
+                <br/>
+                <br/>
+                <textarea id="Documents" name="documents">Documents:</textarea> <!-- Added name attribute -->
+                <h4>
+                    You are currently under Income tax default Option-|(New Tax regime).
+                </h4>
+                <h6>
+                    Do you want to switch from Option-|(New tax regime) to option-||(Old Tax regime)?  
+                </h6>
+                <select name="Type" id="Choose"> <!-- Moved select outside the h6 tag -->
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>  
+                <h6>
+                    <label for="checkbox1">I have read the enclosed Documents attached carefully before exercising the switching option.</label>
+                    <input type="checkbox" name="checkbox" >
+                </h6>
+                <h6>
+                    <label for="checkbox">I can switch only once in a Financial Year.</label>
+                    <input type="checkbox" name="checkbox">
+                </h6>
+             
+                
+                <div class="Legend">
+                    <center>
+                        <input type="submit" name="" style="background-color: deepskyblue;border-color: white;color:white;" />
+                    </center>
+                </div>
+                    
+                <br/>
+             </fieldset>
+         </form>
+     </body>
+</html>

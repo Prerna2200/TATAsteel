@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Regime</title>
+    <style type="text/css">
+        
+        .text{
+            width:1475px;
+            height: 35px;
+            background-color:deepskyblue;
+            font-size: 22px;
+            text-align: justify;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form onsubmit="myfunc(event)">
+        <div class="text">New User</div>
+        password is required to have a minimum of 6 characters 
+        <fieldset>
+            <legend style="color:blueviolet;">User Details</legend style="width=500px;" >
+            
+            User ID(personnel No): <input type="number" id="User ID" value=""  name="User ID" size="30px" />
+            <br/>
+            <br/>
+            User Name: <input type="'text" id="User Name" name="User Name" value=""/>
+            <br>
+            <br/>
+                   E-mail: <input type="email" id="E-mail" name="E-mail"/>
+            <br/>
+            <br/>
+            Contact No: <input type="number" id="Contact No" name="Contact No" value="" />
+            <br/>
+            <br/>
+            
+            password:        
+            <input type="text" id="password"  name="password" placeholder="enter minimum of 6 characters"/>
+            <br/>
+            <br/>
+            Confirm password:        
+            <input type="text" id="Confirm password"  name="Confirm password" placeholder="enter minimum of 6 characters"/>
+            <br/>
+            <br/>
+            
+        </fieldset>
+        <br>
+         <input type="submit" value="submit" id="submit" style=" width: 100px; height:30px ; color:white; background-color:dodgerblue; border-color: white;"/>
+
+    </form>
+    <script type="text/javascript">
+        function myfunc(event){
+            event.preventDefault();
+            var User_ID = document.getElementById("User_ID ").value;
+            var User_Name = document.getElementById("User_Name").value;
+            var E_mail= document.getElementById("E_mail").value;
+            var Contact_No = document.getElementById("Contact_No").value;
+            var password = document.getElementById("password").value;
+            var Confirm_password= document.getElementById(" Confirm_password").value;
+            var temp_submit= document.getElementById("submit").value;
+
+            localStorage.setItem('Is_User_ID',User_ID);
+            localStorage.setItem('Is_User_Name',User_Name);
+            localStorage.setItem('Is_E_mail',E_mail);
+            localStorage.setItem('Is_Contact_No',Contact_No);
+            localStorage.setItem('Is_password',password);
+            localStorage.setItem('Is_Confirm_password',Confirm_password);
+            localStorage.setItem('Is_submit',submit);
+            
+        }
+     </script>
+</body>
+</html>
